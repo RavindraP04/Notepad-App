@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Notepad App</title>
+		<link rel="stylesheet" href="note.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="main">
+				<div class="prop"></div>
+				<div class="header">
+					<h4 id="today">Today</h4>
+					<h1>
+						<span id="month"> </span> <span id="date"></span>,
+						<span id="year"></span>
+					</h1>
+					<h4>
+						<span id="incomplete-no">0</span> incomplete,
+						<span id="complete-no">0</span> completed
+					</h4>
+					<div class="line"></div>
+				</div>
+				<!---- Incomplete section  -->
+
+				<div class="incomplete">
+					<div class="task-row">
+						<h3>Task</h3>
+						<svg
+							id="delete-btn"
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							class="w-6 h-6"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
+							/>
+						</svg>
+					</div>
+
+					<div class="cb">
+						<!-- empty  -->
+						<!-- <div class="items" draggable="true" id="111*">
+							<input type="checkbox" id="111" autocomplete="off" />
+							<label for="111" contenteditable="true">111</label>
+						</div>
+						<div class="items" draggable="true" id="222*">
+							<input type="checkbox" id="222" autocomplete="off" />
+							<label for="222" contenteditable="true">222</label>
+						</div>
+						<div class="items" draggable="true" id="333*">
+							<input type="checkbox" id="333" autocomplete="off" />
+							<label for="333" contenteditable="true">333</label>
+						</div> -->
+					</div>
+				</div>
+
+				<!----  Complete section  -->
+				<div class="line"></div>
+
+				<div class="complete">
+					<div class="completed-dd">
+						<h3>Accomplished</h3>
+						<!-- <svg
+							id="dropdown-icon"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 20 20"
+							fill="currentColor"
+							class="w-5 h-5"
+						>
+							<path
+								fill-rule="evenodd"
+								d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+								clip-rule="evenodd"
+							/>
+						</svg> -->
+					</div>
+
+					<div class="cb completedCB cbDropDown" id="completedMenu">
+						<!-- empty  -->
+					</div>
+				</div>
+
+				<!-- popup window  -->
+				<div class="addPopUpContainer">
+					<div class="addTaskPopUp reveal">
+						<h3>Add your task</h3>
+						<input
+							type="text"
+							class="newTaskBox"
+							placeholder="E.g. Buy Groceries in Evening"
+						/>
+						<div class="funcBtn">
+							<button id="cancel">Cancel</button>
+							<button id="add">Add</button>
+						</div>
+					</div>
+				</div>
+				<!-- AddButton SVG  -->
+				<svg
+					class="add-btn rotated"
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 24 24"
+					fill="currentColor"
+					class="w-6 h-6"
+					style="width:50px;margin: 0 auto;"
+				>
+					<path
+						fill-rule="evenodd"
+						d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 9a.75.75 0 00-1.5 0v2.25H9a.75.75 0 000 1.5h2.25V15a.75.75 0 001.5 0v-2.25H15a.75.75 0 000-1.5h-2.25V9z"
+						clip-rule="evenodd"
+					/>
+				</svg>
+			</div>
+		</div>
+		<script src="note.js"></script>
+	</body>
+</html>

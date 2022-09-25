@@ -1,0 +1,206 @@
+@font-face {
+	font-family: "Euclid-medium";
+	src: url(fonts/Euclid\ Circular\ A\ Medium.ttf);
+}
+
+* {
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Euclid-medium;
+}
+body {
+	max-width: 80%;
+	margin: 1rem auto;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 80%;
+	margin-top: 2rem;
+}
+.main {
+	min-width: 21rem;
+	width: 31%;
+	height: auto;
+	border: 1px solid rgba(128, 128, 128, 0.378);
+	border-radius: 0.9rem;
+	padding: 1.3rem 1.3rem 0.5rem 1.3rem;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	transition: 0.4 all;
+}
+.prop{
+	width: 100%;
+	border: 1px solid rgba(128, 128, 128, 0.378);
+	margin-top: -66px;
+	height: 50px;
+	border-radius: 0.7rem;
+}
+.header {
+	display: flex;
+	flex-direction: column;
+}
+#today {
+	margin-bottom: -0.9rem;
+}
+.header h1 {
+	margin-bottom: -13px;
+	font-size: 1.9rem;
+}
+.header h4 {
+	font-size: 0.9rem;
+}
+.line {
+	border-bottom: 1px solid rgba(128, 128, 128, 0.425);
+}
+.task-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+#delete-btn {
+	height: 1.3rem;
+	margin-left: 2px;
+	cursor: pointer;
+	transition: 0.2s all;
+	-webkit-tap-highlight-color: transparent;
+
+}
+#delete-btn:active {
+	transform: scale(0.9);
+	box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.1);
+}
+
+.completed-dd {
+	position: sticky;
+	display: flex;
+	align-items: center;
+}
+.cb {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+input[type="checkbox"] {
+	height: 15px;
+	width: 15px;
+	margin-top: 5px;
+	float: right;
+}
+input[type="checkbox"]:checked + label {
+	text-decoration: line-through;
+}
+
+#deleteTaskIcon{
+	height: 1.5rem;
+	margin-left: 2px;
+}
+.hidden{
+	display: none;
+}
+.items {
+	display: flex;
+	width: 90%;
+	align-items: flex-start;
+	margin: 0.5rem;
+	/* border: 1px solid rgba(128, 128, 128, 0.378); */
+
+}
+:is(.incomplete, .complete) label {
+	font-size: 0.9rem;
+	display: inline-block;
+	text-overflow: ellipsis;
+	overflow-wrap: break-word;
+}
+label{
+	width: 11rem;
+	/* border: 1px solid rgba(128, 128, 128, 0.378); */
+	outline-color: black;
+	padding: 0.1rem 0.4rem 0.4rem 0.1rem;
+	display: flex;
+	flex-grow: 1;
+	align-items: center;
+	margin-left: 0.2rem;
+}
+
+.add-btn {
+	height: 3rem;
+	transition: all 0.5s;
+	transform: rotate(45deg);
+	/* for hiding the blue highlight in mobile view  */
+	-webkit-tap-highlight-color: transparent;
+}
+.rotated{
+	transform: rotate(0deg);
+
+}
+.add-btn:active {
+	transform: scale(0.95);
+}
+.bottom-add-btn {
+	position: sticky;
+	display: flex;
+	margin: 0 auto;
+	background-color: white;
+}
+
+.addTaskPopUp {
+	position: relative;
+	width: 100%;
+	margin: 0;
+	margin-top: 2rem;
+	background-color: white;
+	border: 1px solid rgba(128, 128, 128, 0.378);
+	border-radius: 0.7rem;
+	padding: 0 2.5rem 2.5rem 1rem;
+	display: grid;
+	align-items: flex-end;
+	transition: all 0.5s;
+}
+.reveal{
+	transform: translateY(130%);
+}
+.addTaskPopUp .newTaskBox {
+	width: 100%;
+	padding: 0 0 0.5rem 0;
+	outline: none;
+	border: none;
+	margin-top: -0.5rem;
+	border-bottom: 1px solid grey;
+}
+
+.funcBtn {
+	margin-top: 0.8rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.funcBtn button {
+	padding: 0.4rem;
+	border-radius: 0.3rem;
+	border: none;
+	outline: none;
+}
+.funcBtn #cancel {
+	background-color: white;
+	color: black;
+	padding: 0.5rem 1rem;
+	border: 1px solid black;
+}
+
+.funcBtn #add {
+	background-color: black;
+	color: white;
+	padding: 0.5rem 1rem;
+}
+.funcBtn #add:active {
+	transform: scale(0.9);
+	box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.1);
+}
+:is(#dropdown-icon, .add-btn, #cancel, #add):hover {
+	cursor: pointer;
+}
+
