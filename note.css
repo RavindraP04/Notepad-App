@@ -9,7 +9,8 @@
 	font-family: Euclid-medium;
 }
 body {
-	max-width: 80%;
+	max-width: 90%;
+	max-height: 100vh;
 	margin: 1rem auto;
 }
 .container {
@@ -17,11 +18,12 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	height: 80%;
+	height: 100%;
 	margin-top: 2rem;
 }
 .main {
-	min-width: 21rem;
+	min-width: 100%;
+	min-height: 90vh;
 	width: 31%;
 	height: auto;
 	border: 1px solid rgba(128, 128, 128, 0.378);
@@ -55,6 +57,12 @@ body {
 }
 .line {
 	border-bottom: 1px solid rgba(128, 128, 128, 0.425);
+}
+.line1{
+    padding-top: 40px;
+
+	border-bottom: 1px solid rgba(128, 128, 128, 0.425);
+
 }
 .task-row {
 	display: flex;
@@ -125,13 +133,30 @@ label{
 	align-items: center;
 	margin-left: 0.2rem;
 }
-
+#new{
+   margin-top: 50px;
+   display: flex;
+   position: absolute;
+   right: 90px;
+   top: 20px;
+   cursor: pointer;
+   align-items: center;
+   border: 2px solid black;
+   border-radius: 0.7rem;
+   padding: 0 10px;
+}
+.new-note{
+    font-size: 18px;
+}
 .add-btn {
 	height: 3rem;
 	transition: all 0.5s;
 	transform: rotate(45deg);
 	/* for hiding the blue highlight in mobile view  */
 	-webkit-tap-highlight-color: transparent;
+    /* position: absolute;
+    top: 70px;
+    right: 90px; */
 }
 .rotated{
 	transform: rotate(0deg);
@@ -151,7 +176,7 @@ label{
 	position: relative;
 	width: 100%;
 	margin: 0;
-	margin-top: 2rem;
+	margin-top: 19.5rem;
 	background-color: white;
 	border: 1px solid rgba(128, 128, 128, 0.378);
 	border-radius: 0.7rem;
@@ -161,7 +186,7 @@ label{
 	transition: all 0.5s;
 }
 .reveal{
-	transform: translateY(130%);
+	transform: translateY(111%);
 }
 .addTaskPopUp .newTaskBox {
 	width: 100%;
@@ -203,4 +228,13 @@ label{
 :is(#dropdown-icon, .add-btn, #cancel, #add):hover {
 	cursor: pointer;
 }
-
+#note-title{
+    border: none;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    font-size: 22px;
+}
+#note-title:focus{
+    border: none;
+    outline: none;
+}

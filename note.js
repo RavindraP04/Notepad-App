@@ -28,20 +28,20 @@ month.textContent = currentMonth;
 year.textContent = currentYear;
 
 //..Updation of the number of tasks in the incomplete and complete sections.
-function updation() {
-	// Incomplete tasks
-	const inCompleteNum = document.querySelector("#incomplete-no");
-	const inCompleteTasks = document.querySelector(".cb");
-	const countTask_ict = inCompleteTasks.children.length;
-	inCompleteNum.textContent = countTask_ict;
+// function updation() {
+// 	// Incomplete tasks
+// 	const inCompleteNum = document.querySelector("#incomplete-no");
+// 	const inCompleteTasks = document.querySelector(".cb");
+// 	const countTask_ict = inCompleteTasks.children.length;
+// 	inCompleteNum.textContent = countTask_ict;
 
-	// Complete tasks
-	const completeNum = document.querySelector("#complete-no");
-	const completeTasks = document.querySelector(".completedCB");
-	const countTask_ct = completeTasks.children.length;
-	completeNum.textContent = countTask_ct;
-}
-updation();
+// 	// Complete tasks
+// 	const completeNum = document.querySelector("#complete-no");
+// 	const completeTasks = document.querySelector(".completedCB");
+// 	const countTask_ct = completeTasks.children.length;
+// 	completeNum.textContent = countTask_ct;
+// }
+// updation();
 
 //-----------
 const newTask = document.querySelector(".newTaskBox");
@@ -64,9 +64,17 @@ function newTaskChild() {
 	newInput.setAttribute("type", "checkbox");
 	newInput.setAttribute("id", `${newTaskValue}*`);
 	newInput.setAttribute("autocomplete", "off");
+    //copyToClipboard
+	const newCopy = document.createElement("div");
+    newCopy.className ="fa-solid fa-copy";
+    newCopy.setAttribute("id", `${newTaskValue}*`);
+    newCopy.style.position = "relative";
+    newCopy.style.left = "1133px";
+
 
 	//Appending new input element to <div class = "items">
 	newChild.appendChild(newInput);
+    newChild.appendChild(newCopy);
 
 	//Creating new label element and settings its attributes - <label for = "">
 	const newChildLabel = document.createElement("label");
@@ -180,10 +188,16 @@ deleteAllBtn.addEventListener("click", function () {
 //.. Function to hide/show - add task box.
 
 const addPopUp = document.querySelector(".add-btn");
+const newNote = document.querySelector("#new");
 const popClass = document.querySelector(".addTaskPopUp");
 addPopUp.addEventListener("click", function () {
 	popClass.classList.toggle("reveal");
 	addPopUp.classList.toggle("rotated");
 });
+newNote.addEventListener("click", function () {
+	popClass.classList.toggle("reveal");
+	addPopUp.classList.toggle("rotated");
+});
+
 
 
