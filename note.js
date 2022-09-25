@@ -61,15 +61,16 @@ function newTaskChild() {
 
 	//Creating new Input element and settings its attributes - <input type = "checkbox">
 	const newInput = document.createElement("input");
-	newInput.setAttribute("type", "checkbox");
+    newInput.style.position = "relative";
+    newInput.setAttribute("type", "checkbox");
 	newInput.setAttribute("id", `${newTaskValue}*`);
 	newInput.setAttribute("autocomplete", "off");
     //copyToClipboard
 	const newCopy = document.createElement("div");
     newCopy.className ="fa-solid fa-copy";
     newCopy.setAttribute("id", `${newTaskValue}*`);
-    newCopy.style.position = "relative";
-    newCopy.style.left = "1133px";
+    newCopy.style.position = "absolute";
+    newCopy.style.right = "90px";
 
 
 	//Appending new input element to <div class = "items">
