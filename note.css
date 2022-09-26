@@ -7,11 +7,14 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: Euclid-medium;
+	color: #ffffff;
 }
 body {
 	max-width: 90%;
-	max-height: 100vh;
+	min-height: 100vh;
 	margin: 1rem auto;
+	/* background-color: #0D0D0D; */
+	background: linear-gradient(0deg, #202629 0%, #0D0D0D 100%);
 }
 .container {
 	display: flex;
@@ -141,7 +144,7 @@ label{
    top: 20px;
    cursor: pointer;
    align-items: center;
-   border: 2px solid black;
+   border: 2px solid #ffffff;
    border-radius: 0.7rem;
    padding: 0 10px;
 }
@@ -152,11 +155,7 @@ label{
 	height: 3rem;
 	transition: all 0.5s;
 	transform: rotate(45deg);
-	/* for hiding the blue highlight in mobile view  */
 	-webkit-tap-highlight-color: transparent;
-    /* position: absolute;
-    top: 70px;
-    right: 90px; */
 }
 .rotated{
 	transform: rotate(0deg);
@@ -177,7 +176,7 @@ label{
 	width: 100%;
 	margin: 0;
 	margin-top: 19.5rem;
-	background-color: white;
+	background: linear-gradient(0deg, #242B2E 0%, #0D0D0D 100%);
 	border: 1px solid rgba(128, 128, 128, 0.378);
 	border-radius: 0.7rem;
 	padding: 0 2.5rem 2.5rem 1rem;
@@ -195,6 +194,7 @@ label{
 	border: none;
 	margin-top: -0.5rem;
 	border-bottom: 1px solid grey;
+	background-color: transparent;
 }
 
 .funcBtn {
@@ -210,15 +210,15 @@ label{
 	outline: none;
 }
 .funcBtn #cancel {
-	background-color: white;
-	color: black;
+	background-color: #242B2E;
+	color: #ffffff;
 	padding: 0.5rem 1rem;
-	border: 1px solid black;
+	border: 1px solid #ffffff;
 }
 
 .funcBtn #add {
-	background-color: black;
-	color: white;
+	background-color: white;
+	color: black;
 	padding: 0.5rem 1rem;
 }
 .funcBtn #add:active {
@@ -233,6 +233,9 @@ label{
     margin-bottom: 20px;
     padding: 10px 0;
     font-size: 22px;
+	width: 50%;
+	color: #ffffff;
+	background-color: transparent;
 }
 #note-title:focus{
     border: none;
