@@ -149,13 +149,14 @@ label{
    padding: 0 10px;
 }
 .new-note{
-    font-size: 18px;
+    font-size: 16px;
 }
 .add-btn {
 	height: 3rem;
 	transition: all 0.5s;
 	transform: rotate(45deg);
 	-webkit-tap-highlight-color: transparent;
+	height: 45px;
 }
 .rotated{
 	transform: rotate(0deg);
@@ -240,4 +241,32 @@ label{
 #note-title:focus{
     border: none;
     outline: none;
+}
+@media screen and (max-width: 648px) {
+	#new{
+		position: absolute;
+		right: 35%;
+		top: 110px;
+	}
+	.add-btn{
+		height: 35px;
+	}
+	#new p{
+		font-size: 15px;
+		margin: auto;
+	}
+}
+@media screen and (max-width: 378px) {
+	#new{
+		position: absolute;
+		right: 28%;
+		top: 145px;
+	}
+	.add-btn{
+		height: 35px;
+	}
+	#new p{
+		font-size: 15px;
+		margin: auto;
+	}
 }

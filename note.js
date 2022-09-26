@@ -66,16 +66,16 @@ function newTaskChild() {
 	newInput.setAttribute("id", `${newTaskValue}*`);
 	newInput.setAttribute("autocomplete", "off");
     //copyToClipboard
-	const newCopy = document.createElement("div");
-    newCopy.className ="fa-solid fa-copy";
-    newCopy.setAttribute("id", `${newTaskValue}*`);
-    newCopy.style.position = "absolute";
-    newCopy.style.right = "90px";
+	// const newCopy = document.createElement("div");
+    // newCopy.className ="fa-solid fa-copy";
+    // newCopy.setAttribute("id", `${newTaskValue}*`);
+    // newCopy.style.position = "absolute";
+    // newCopy.style.right = "90px";
 
 
 	//Appending new input element to <div class = "items">
 	newChild.appendChild(newInput);
-    newChild.appendChild(newCopy);
+    // newChild.appendChild(newCopy);
 
 	//Creating new label element and settings its attributes - <label for = "">
 	const newChildLabel = document.createElement("label");

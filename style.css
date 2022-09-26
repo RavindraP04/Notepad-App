@@ -13,6 +13,7 @@ html{
 }
 body{
     background-color: #191E3C;
+    min-width: 90vw;
 }
 
 /* Logo */
@@ -65,7 +66,8 @@ nav a{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap-reverse;
-    margin-top: 180px;
+    margin: 180px auto ;
+    max-width: 1200px;
 }
 .section_11{
     margin-top: -20px;
@@ -103,6 +105,7 @@ nav a{
 .section_12 img{
     height: 480px;
     margin-top: -100px;
+    margin-right: -100px;
 }
 
 /* Section_2 */
@@ -112,6 +115,9 @@ nav a{
     justify-content: space-evenly;
     margin-top: 228px;
     margin-bottom: 100px;
+    margin: 180px auto ;
+    max-width: 1200px;
+
 }
 .section_21 h2{
     font-size: 50px;
@@ -132,4 +138,38 @@ nav a{
 .feature2 img{
     height: 15px;
     padding-right: 32px;
+}
+@media screen and (max-width: 1086px) {
+    .section_11 h2{
+        font-size: 50px;
+    }
+    .section_12 img{
+        height: 450px;
+    }
+}
+@media screen and (max-width: 790px) {
+    .section_11 h2{
+        font-size: 45px;
+        text-align: center;
+    }
+    .section_11 p{
+        text-align: center;
+    }
+    .section_12 img{
+        height: 420px;
+        margin-right: 100px;
+    }
+}
+@media screen and (max-width: 914px) {
+    .section_11 h2{
+        font-size: 45px;
+    }
+    .section_12 img{
+        height: 420px;
+        margin-right: -80px;
+    }
+    .section_11 .choose-package-btn{
+        display: flex;
+        justify-content: center;
+    }
 }
