@@ -14,11 +14,37 @@ html{
 body{
     background-color: #191E3C;
     min-width: 90vw;
+    position: relative;
+    z-index: -2;
+}
+body::before{
+    content: "";
+    position: absolute;
+    top: 180px;
+    left: 30rem;
+    background-image: url(/assets/Untitled.svg);
+    background-repeat: no-repeat;
+    height: 100%;
+    /* z-index: 1; */
+    width: 19%;
+    /* margin-top: 150px; */
+    /* margin-left: 32%; */
 }
 
 /* Logo */
+.logo-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-div h1{
+    font-family: "Open Sans";
+    color: #ffffff;
+    /* font-weight: 800; */
+    font-size: 28px;
+}
 .logo{
-    height: 120px;
+    height: 40px;
 }
 
 /* Navbar-List */
@@ -38,9 +64,26 @@ nav a{
     font-family: "Open Sans";
     color: #ffffff;
     cursor: pointer;
+    position: relative;
 }
 .nav-item:hover{
     color: rgb(240, 238, 238);
+}
+.nav-item::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    background-color: #ffffff;
+    height: 2px;
+    bottom: 0;
+    transform: scaleX(0);
+    left: 0;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.nav-item:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 
@@ -57,7 +100,7 @@ nav a{
     cursor: pointer;
     color: #ffffff;
 }
-.fa-solid{
+.ham i{
     display: none;
 }
 
@@ -67,10 +110,33 @@ nav a{
     justify-content: space-evenly;
     flex-wrap: wrap-reverse;
     margin: 180px auto ;
-    max-width: 1200px;
+    max-width: 1300px;
+    position: relative;
+    z-index: 1;
+}
+.sticky-notes{
+    display: flex;
+    margin-bottom: 20px;
+}
+.sticky-notes #des{
+    background-color: #41476bc5;
+    border-radius: 40px;
+    padding: 12px 30px 12px 15px;
+    color: #7D82A2;
+    font-family: Roboto;
+    margin-bottom: auto;
+    font-weight: 600;
+    font-size: 15px;
+}
+.sticky-notes img{
+    height: 40px;
+    position: relative;
+    top: -10px;
+    left: -20px;
+    transform: rotate(30deg);
 }
 .section_11{
-    margin-top: -20px;
+    margin-top: -50px;
 }
 .section_11 h2{ 
     font-family: "Open Sans";
@@ -80,6 +146,7 @@ nav a{
 }
 .create-text{
     color: #FF574A;
+    position: relative;
 }
 .section_11 p{
     font-family: "Open Sans";
@@ -90,11 +157,24 @@ nav a{
     font-size: 16px;
     word-spacing: 2px;
 }
-.section_11 button{
-    padding: 17px 0px;
-    width: 200px;
+.newBTN{
+    padding: 15px 0px;
+    width: 170px;
     font-family: "Roboto";
-    font-size: 17px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 30px;
+    background: transparent;
+    border: 2px solid #F45142;
+    cursor: pointer;
+    color: #F45142;
+    margin-left: 20px;
+}
+.section_11 .btn{
+    padding: 17px 0px;
+    width: 170px;
+    font-family: "Roboto";
+    font-size: 16px;
     font-weight: 500;
     border-radius: 30px;
     background: linear-gradient(180deg, #F45142 0%, #B5281E 100%);
@@ -106,6 +186,37 @@ nav a{
     height: 480px;
     margin-top: -100px;
     margin-right: -100px;
+    animation: bounce 2s ease-in forwards infinite alternate;    
+}
+@keyframes bounce {
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+.easy{
+    position: absolute;
+    height: 92px;
+    margin-top: -90px;
+    margin-left: 165px;
+    transform: rotate(-3deg);
+}
+.fa-check{
+    font-size: 13px;
+    color: #FCC649;
+    background-color: #635645c7;
+    padding: 5px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.check{
+    display: flex;
+    margin: auto;
+    margin-top: 35px;
+}
+.check p{
+    margin-top: -27px;
+    font-size: 14px;
 }
 
 /* Section_2 */
@@ -116,7 +227,7 @@ nav a{
     margin-top: 228px;
     margin-bottom: 100px;
     margin: 180px auto ;
-    max-width: 1200px;
+    max-width: 1300px;
 
 }
 .section_21 h2{
